@@ -1,0 +1,102 @@
+Basic concepts ....
+
+1.Repository(place where you store all your project files)
+2.Branch(is a collection of commits)
+3.Commit(snapshot of the state of your file system)
+4.Merge Conflict(when you change a line in a file & someone changes the same linr git doesnt know how to merge )
+5.Pull Requests
+6.Staging
+7.Git ignore (doesnt keep a record of any files you dont want to track)
+
+
+
+**** need to add gitignore file 
+**** Processing sketch name must be the same as git name 
+
+
+Git Commands .....
+
+
+
+1.git init 
+
+	initialises the repository(creates a hidden .git folder)
+	
+	
+2.git remote add origin(borowser url)
+
+
+	adds your repos to the repos on the remote server
+	
+3.git pull origin master 
+
+	`connects your master branch and the master branch on the server (origin is an aliase for the URL)
+	
+	
+4.git add . 
+
+	(searches through your file system and pushes any files that have been changed)
+
+	
+5. git add . -u
+
+	same as git add but even includes deleted files
+	
+	
+6.git commit 
+	(will commit your files)
+	
+	
+7.git push --set-upstream orgin master
+	(send commit to remote server)
+	
+	
+	
+	
+	
+	MAKE A NEW COMMIT(because you changed a file)
+	
+	
+	git add.
+	git commit or git commit -m "type your message" (if you dont want to go into vi editor)
+	dit push
+	
+	
+	
+	
+8.git log
+
+	(shows commit history)
+	
+	
+	
+	
+	
+9.git checkout (40 digit hex id )
+
+
+	will bring you back to a previous version of the file(how you switch from one branch to another)
+
+
+
+10.git merge (branch name)
+
+	this is how you merge branches
+	
+	
+	
+11.git pull 
+
+	get edits from server to local 
+	
+	
+	
+	
+12. git status 
+	tells you if you have files you havnt pushed
+	
+	
+	
+13.git clone (url)
+
+		clones a git server onto your machine

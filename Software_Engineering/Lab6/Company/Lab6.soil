@@ -1,0 +1,29 @@
+
+
+!create joe :Employee
+!joe.name:= 'Joseph Smith'
+!joe.age:= 17
+!joe.salary:= 21000.0
+
+!create sue :Employee
+!sue.name:= 'Susan Kane'
+!sue.age:= 25
+!sue.salary:= 20000.0
+
+!create tom :Manager
+
+
+!create ibm :Company
+!ibm.name:='IBM Ltd'
+!ibm.location:='Dublin'
+
+
+!insert (tom, ibm) into Manages
+!insert (joe, ibm) into WorksFor
+
+
+!ibm.hire(sue)
+!tom.doHire(sue)
+
+!ibm.calcTotalSalary()
+

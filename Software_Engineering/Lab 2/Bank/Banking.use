@@ -1,0 +1,26 @@
+model BankingSys
+
+class BankAccount
+	attributes
+		balance : Integer
+		accountNo : String
+	operations
+		deposit(amount : Integer)
+		begin
+			self.balance:=self.balance + amount;
+		end
+
+end
+
+
+
+class Customer
+	attributes
+		FirstName: String
+		SurName: String
+		Age : Integer
+		Email :String
+		accountNo : String
+	
+
+end

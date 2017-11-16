@@ -1,0 +1,115 @@
+
+
+
+														// Using Functions
+
+
+
+
+
+1. Find the names of all events and output the name in uppercase, lowercase and with an initial capital letter;
+			
+			Select LOWER(eventName) from event;
+			Select UPPER(eventName) from event;
+			Select INITCAP(eventName) from event;
+			
+			
+2. Find all competitors with a letter u at position 4 of email address.Hint: use SUBSTR
+
+
+					Select compEmail from competitor
+					Where SUBSTR(compEmail,4,1) = 'u';
+					
+					
+
+3.Output the email addresses of all competitors but replace usa by America in the email address in the output. Hint: use replace
+
+		SELECT REPLACE(compEmail,'usa','america') from competitor;
+		
+		
+		
+4.		Output the names and dates of all events with a prize fund of 250,000. Output the prize fund with a dollar
+		symbol and formatted as $999,999.99 and the date formatted as DD/MM/YYYY.
+		Hint: use to_char e.g. to_char(datex,'fmDD/MM/YYYY'), e.g. to_char(numberx,'$999,999.99')
+		
+		
+		
+		Select eventname, to_char(eventdate,'fmDD/MM/YYYY'), to_char(prizeFund,'$999,999.99') 
+		from event 
+		where prizefund=250000;
+		
+		
+		
+		
+		
+5.Output the names and prize funds of all events. If a prize fund is null then rather than outputting null output 0. Hint: use NVL e.g. NVL(numberx,0)
+
+
+
+select eventname, nvl(prizefund, 0)  
+from event;
+
+
+
+
+
+
+
+															//2. Joins
+															
+															
+1.Find the names of all competitors who finished in third position in their events include the position in the output.
+Hint: Join competitor and eventResult. From should be eventResult
+
+SELECT compName, compId,position
+from EventResult
+join competitor
+using (compId);
+WHERE position = 3;
+
+
+2.
+Change the SQL for 1 to include the eventName.
+Hint: include a join to EVENT but you can’t use using.
+
+select compName, eventName, position
+from eventResult
+join Competitor using (compID)
+join Event on eventNo=eventID
+where position=3;
+
+
+3.
+Change the SQL 
+so that it reads as a sentence Competitor competitor x finished in 3rdposition in event x  on DD Month YYYY.
+Where DD Month YYYY is the event date.
+
+select 'Competitor ' || compName || ' finished in 3rd position in ' || eventName || ' on ' || to_char(eventdate, 'fm DD MONTH YYYY')
+from eventResult
+join Competitor using (compID)
+join Event on eventNo=eventID
+where position=3;
+
+
+4.
+Output the following for allcompetitors who have a letter u in the 4 position of their email address:their name, the 
+name of the events they competed in and the position they finished in those events. 
+
+select compName, eventName, position
+from eventResult
+join Competitor using (compID)
+join Event on eventNo=eventID
+where substr(compEmail, 4,1) ='u' ;
+
+5.
+Output the name of all events in all sports. Include the name of the sport in the output and the prize fund 
+formatted as $99999.99.
+
+
+select eventname, sportname, to_char(prizeFund,'$999,999.99')
+from event 
+join sport using (sportCode);
+		
+
+
+		

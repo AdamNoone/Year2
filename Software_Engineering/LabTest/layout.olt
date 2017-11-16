@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram_Layout version="13">
+  <diagramOptions>
+    <autolayout>false</autolayout>
+    <antialiasing>false</antialiasing>
+    <showassocnames>true</showassocnames>
+    <showattributes>true</showattributes>
+    <showmultiplicities>false</showmultiplicities>
+    <showoperations>false</showoperations>
+    <showrolenames>true</showrolenames>
+    <showgrid>false</showgrid>
+    <ShowStates>true</ShowStates>
+  </diagramOptions>
+  <node id="molly" sizeCalculated="true" type="Object">
+    <name>molly</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>240.3271082229113</x>
+      <y>21.41887691180804</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Puss" sizeCalculated="true" type="Object">
+    <name>Puss</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>244.23660361815547</x>
+      <y>164.00837920139443</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Rex" sizeCalculated="true" type="Object">
+    <name>Rex</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>136.41831615864868</x>
+      <y>333.2558018624391</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="me" sizeCalculated="true" type="Object">
+    <name>me</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>22.3727309108628</x>
+      <y>129.75142484869812</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="v1" sizeCalculated="true" type="Object">
+    <name>v1</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>451.32171067204365</x>
+      <y>75.91009567497002</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="v2" sizeCalculated="true" type="Object">
+    <name>v2</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>444.1479632989923</x>
+      <y>282.6439277751375</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <edge type="BinaryEdge">
+    <source>me</source>
+    <target>Rex</target>
+    <name>Owns</name>
+    <properties>
+      <edgeproperty
+        id="[Owns : (accounts:Rex, petOwner:me)]::source::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>petOwner</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:Rex, petOwner:me)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Rex, petOwner:me)]::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:Rex, petOwner:me)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Rex, petOwner:me)]::AssociationName"
+        sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+        <name>Owns</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>[Owns : (accounts:Rex, petOwner:me)]::WayPoint::0</related0>
+            <related1>[Owns : (accounts:Rex, petOwner:me)]::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Rex, petOwner:me)]::target::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>accounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:Rex, petOwner:me)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Rex, petOwner:me)]::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:Rex, petOwner:me)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty
+        id="[Owns : (accounts:Rex, petOwner:me)]::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Rex, petOwner:me)]::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+    <linkValue>[Owns : (accounts:Rex, petOwner:me)]</linkValue>
+  </edge>
+  <edge type="BinaryEdge">
+    <source>me</source>
+    <target>molly</target>
+    <name>Owns</name>
+    <properties>
+      <edgeproperty
+        id="[Owns : (accounts:molly, petOwner:me)]::source::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>petOwner</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:molly, petOwner:me)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:molly, petOwner:me)]::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:molly, petOwner:me)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:molly, petOwner:me)]::AssociationName"
+        sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+        <name>Owns</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>[Owns : (accounts:molly, petOwner:me)]::WayPoint::0</related0>
+            <related1>[Owns : (accounts:molly, petOwner:me)]::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:molly, petOwner:me)]::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:molly, petOwner:me)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:molly, petOwner:me)]::target::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>accounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:molly, petOwner:me)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty
+        id="[Owns : (accounts:molly, petOwner:me)]::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:molly, petOwner:me)]::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+    <linkValue>[Owns : (accounts:molly, petOwner:me)]</linkValue>
+  </edge>
+  <edge type="BinaryEdge">
+    <source>me</source>
+    <target>Puss</target>
+    <name>Owns</name>
+    <properties>
+      <edgeproperty
+        id="[Owns : (accounts:Puss, petOwner:me)]::source::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>petOwner</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:Puss, petOwner:me)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Puss, petOwner:me)]::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:Puss, petOwner:me)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Puss, petOwner:me)]::AssociationName"
+        sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+        <name>Owns</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>[Owns : (accounts:Puss, petOwner:me)]::WayPoint::0</related0>
+            <related1>[Owns : (accounts:Puss, petOwner:me)]::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Puss, petOwner:me)]::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:Puss, petOwner:me)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Puss, petOwner:me)]::target::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>accounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[Owns : (accounts:Puss, petOwner:me)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty
+        id="[Owns : (accounts:Puss, petOwner:me)]::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[Owns : (accounts:Puss, petOwner:me)]::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+    <linkValue>[Owns : (accounts:Puss, petOwner:me)]</linkValue>
+  </edge>
+</diagram_Layout>

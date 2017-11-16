@@ -1,0 +1,212 @@
+<html>
+
+<head>
+
+
+<title>C16448216 Databases CA 1</title>
+
+
+<H1>Student Information</H1>
+		
+		<p>Student Number : C16448216</p>
+		<p>Student Name : Adam Noone</p>
+		<p>Course Code : DT228</p>
+		
+		
+
+</head>
+
+<body>
+		<H1>Attribute Datatypes</H1>
+		
+		<p>Attribute Datatypes are used to determine what type of data an attribute will contain.
+			The majority of my datatypes were varchar2(n).When it came to naming attributes such as game_name my convention
+			was to allow the user to enter a name size of 30 characters (varchar2(30)).This gives the user plenty of room 
+			to enter both long and short names.However when it came to attributes that needed a large area of text such as a description 
+			or review my convention was to use Varchar2(300),for example description_of_product.This gives the user enough space to input their desired information.
+			I also had to use Varchar2 on attributes such as the password for each reviewer because the password had to be  8 characters in length but can
+			include numerical values.I used varchar(8) for the username of each reviwer because the username must be 8 characters in length but can 
+			include numerical values.
+		
+		</p>
+		
+		<p>
+		  I had alot of attributes with the data type Number.All my number datatypes are either Integer(n) or Integer(n,m).
+		  I used Integer(n) when i was working with a single integer numbers eg 12431.Integer(n) is the data type for all off my id attributes
+		  such as product_id_PK and game_id_PK .Also my convention with all the id's in the database is that they are all 5 digit integer numbers
+		  so the datatype is Integer(5).I used Integer(n,m) when I was working with a decimal numbers such as in the attributes price_paid and selling_price.
+		  The n represents the number before tthe decimal point and the m represents the number after tthe decimal point.
+		 </p>
+		 
+		 <p>
+		     I used the DATE datatype the represent any variables which needed to hold time or date ,such as date_orderd and date_recieved.
+			 Also i just want to metion my model layout ,I put the attibutes in the locations I did so that no relationship lines crossed eachother.
+			 This allows anyone who may be developing my database to clearly understand the relationships between entites and it also gives the model an 
+			appealing aesthetic.
+			 
+		 </p>
+		 
+		 <p>
+		     Another important element of making any model is to carfully choose what attributes should be NOT NULL.Originally I thought I was just going to set 
+			 every attribute to NOT NULL but I soon realised this is a bad idea,for example you dont need to know both Rep_phone_number and Rep_Email.Once you know one 
+			 of the attributes you can contact the representative.So in this case I have set rep_phone_number NOT NULL.Therfore you have to know the representatives phone number 
+			 but not his email address.Some attributes need to be able to contain a null value or you will have a problem when it comes to implementing the database.
+			 For example in the entity Order_Dates the attibute date_order is set as NOT NULL so an order date must be enterd but Order_recieved is set as null 
+			 because you cant enter the date the order was recieved on,if the order has not arrived yet.
+			 
+		 </p>
+		 
+		 	 
+		 
+		 
+		 
+		 
+		 
+		 <H1>Keys (Primary, Foreign, Alternate)</H1>
+		 
+		 
+		 
+         <p>
+		 
+		     <u><br>Primary Keys<br></u><br> As seen from my ERD most of my primary keys have an id element to them such as review_id_PK and supplier_id_PK.
+			 the main reason I chose to use Integer(5) id numbers to as primary keys is beacause its a simple and effective way to recognise and get information from each entity. 
+			 Its also makes it very easy to build relationships between entities.For example in the entity Supplier the primary key is supplier_id_PK ,
+			 this could be a number such as 13456.When Games Galore whats to access the information in the supplier entity (supplier_name,supplier_email,sulppier_Phone)
+			 all they need to know is the supplier_id.
+			 
+			 
+		 </p>
+		 
+		 <p>
+		     <u><br>Foreign Keys<br></u><br> As most of my Primary Keys are id attributes that means that most of my foreign keys
+			  are also going to be id attributes such as product_id_PK(FK) which is a foreign key in the entity Order.I have decided that product_id_PK(FK)
+			  should be a primary foreign key so that Games Galore only need the product_id to make an order .
+			  They dont need to use the name of the item being ordered.Attributes such as date_id_PK(FK) is NOT a primary foreign key but the Games Galore still have access 
+			  to the attibutes of the entity Order_dates.My entity Game_Review contains both primary foreign keys and normal foreign keys. I decided to have 
+			  game_id_PK as a primary foreign key in the entity Game_Review so that when a user looks at the game_id in the database they get a few reviews to give them 
+			  more information about the game.The review will also give information about the reviewer who has given to review ,this is done by listing username_PK 
+			  as a foreign key in Game_Review.
+			 
+			 
+		 </p>
+		 
+		 		 <p>
+		     <u><br>Alternate Keys<br></u><br>Throughout the creation of my ERD I had to make a decision on what was going to be the primary key for 
+			 each entity.My possible primary keys were known as my candidate keys.For example in the entity supplier the candidate keys were supplier_name
+			 and supplier_id.Evntually I decided that my convention was going to be to make all my id attributes primary keys,so in the prvious
+			 example supplier_id_PK became the primary key and supplier_name became an alternate key .
+			 Alternate keys can also be categorised as unique attributes, meaning that the can't have the same value as any 
+			 other attribute (ie the data in an alternate key must be unique).I have chosen to make attributes such as rep_email alternate keys becuase 
+			 no two representatives email addresses should be the same.I also made game_name in the Game entity an alternate key because in my 
+			 database I dont want any two games to have the same name.
+			 
+			 
+		 </p>
+		 
+		 <H1>Relationships</H1>
+		
+		<p>
+		Logical modeling deals with gathering requirements and turning those requirements into a model 
+		and that is mainly what I focused on as we didnt have to build an actually database for this assingment,just the ERD.
+		I started by creating a large entity such as Product.Intially the entities Product ,Product_Type ,Product_Description and Product_Pricing 
+		were all in one bigger entity called Product.I then proceeded to break this one big entity into 4 smaller entities so data would not be replicted this is called normalization
+		(ie i wanted to reduce data redundency),
+		I then linked all the new sub entities(Product_Type ,Product_Description and Product_Pricing ) back to Product using one to 
+		many relationships.One product type can belong to many products .One product description can belong to many products and 
+		one product pricing stategy can belong to many products.Linking entities using one to many relationships allowed the primary keys of my sub entities 
+		to be stored as foreign keys in my main entity (Product) allowing the user to access and change data freely and easily</p>
+		
+		<p>Physical modeling involves the actual design of a database using requirements that were established during the logical modeling phase,
+		   it deals with the conversion of the logical, into a relational database model. The majority of my ERD is logical as I think its a smarter and easier way to 
+		   reperesent my design.The main part of my ERD that is physical occurs between the entities Game,Console and Skill.A game can have many
+		   consoles and a console can have many games,therfore the relationship between Game and Console is many to many.A game can have many skills and skills can apply to many games so the relationship between Game and 
+		   Skills is many to many.Now when switched to physical modelling mode it creates two new (WEAK) entities called Game_Console (contains game_id_PK and console_id_PK_)
+		   and Game_Skills (contains game_id_PK and Skills_id_PK).These new physical entities allow us to access the vital and most important pieces of data 
+		   in Game,Console and Skills much quicker and easier. I have not incuded them in the logical model becuase in my logical i focused purely on 
+			gathering requirements and these two weak entities are not needed until the implementation stage of my database. I also have 2 more weak entities in my 
+			physicl model.One between representative and supplier(Representative_Supplier) and another between supllier and product (Supllier_Product).	
+		</p>
+		
+		<p>
+		</p>
+		
+		
+		 <H1>Constraints</H1>
+		
+		<p>
+		Constraints are used to validate input.How did I decided what my constraints were going to be? I read the assingment description very carefully and 
+		and looked for any input that needed to be validated.For example Each order has a unique order_number (6 characters which must start with a letter followed by 5 digits).
+		So i broke the order number up into order_id_char and order_id_int.
+		In total I had 7 constraints as listed and explained below.
+		
+					<ol>
+					  <li>CHECK_EMAIL CHECK_EMAIL = UNIQUE:States that no two email address's can be the same</li>
+					  <li>CHECK_EMAIL CHECK_EMAIL  like '%@%' :States that The string entered must contain an @ symbol ( like '%@%')</li>
+					  <li>CHECK_CODE CHECK_CODE =5 :States that the length of each product code must be exactly 5 digits in length</li>
+					  <li>CHECK_ID CHECK_ID =5 : States the length of the id code must be exactly 5 digits in length</li>
+					  <li>CHECK_CHAR CHECK_CHAR =1:States Only a single character is accepted</li>
+					  <li>CHECK_PASSWORD CHECK_PASSWORD >=8: States that length of string entered must be at least 8 characters  </li>
+					  <li>CHECK_USERNAME CHECK_USERNAME =8: States that the reviewers username must be 8 characters in length </li>
+					  
+					</ol>
+					
+					I have also put UNIQUE constraints on many attributes in my model such as game_name,rep_email,supplier_email and the email address of the reviewer.
+					This is to ensure that all the attributes are unique (ie no two emails are the same).
+		</p>
+		
+		
+		
+		 <H3>List of Primary Keys</H3>
+		
+		<p>
+		
+		
+					<ol>
+					  <li>product_id_PK</li>
+					  <li>type_id_PK</li>
+					  <li>description_id_PK</li>
+					  <li>pricing_id_PK</li>
+					  <li>game_id_PK</li>
+					  <li>console_id_PK</li>
+					  <li>skill_id_PK</li>
+					  <li>order_id_char</li>
+					  <li>order_id_int</li>
+					  <li>date_id_PK</li>
+					  <li>rep_id_PK</li>
+					  <li>rep_name_PK</li>
+					  <li>supplier_id_PK</li>
+					  <li>username_PK</li>
+					  <li>review_id_PK</li>
+					  
+					</ol>
+					
+					
+		</p>
+
+		
+		
+		<H3>List of VALUE Constraints</H3>
+		
+		<p>
+		
+		
+					<ol>
+					   <li>CHECK_CHAR CHECK_CHAR =1</li>
+					  <li>CHECK_CODE CHECK_CODE =5</li>
+					  <li>CHECK_EMAIL CHECK_EMAIL  like '%@%' </li>
+					  <li>CHECK_EMAIL CHECK_EMAIL = UNIQUE</li>
+					  <li>CHECK_ID CHECK_ID =5</li>
+					  <li>CHECK_PASSWORD CHECK_PASSWORD >=8</li>
+					  <li>CHECK_USERNAME CHECK_USERNAME =8</li>
+					  
+					  
+					</ol>
+					
+					
+		</p>
+
+
+<body>
+
+
+</html>

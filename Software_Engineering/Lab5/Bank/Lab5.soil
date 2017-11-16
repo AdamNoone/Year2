@@ -1,0 +1,33 @@
+!create joe :Customer
+!joe.name:= 'Joseph'
+!create savAcc :SavingsAccount
+!new CurrentAccount ('curAcc')
+!savAcc.accNo := '123401'
+!curAcc.accNo := '123402'
+!savAcc.balance := 550
+!curAcc.balance := -200
+!curAcc.od_limit := 500
+!insert (joe, savAcc) into HasAccounts
+!insert (joe, curAcc) into HasAccounts
+
+
+--!joe.openNewAccount('savings')
+--Enter new account number: 123405
+--use> !joe.showWealth()
+
+
+
+
+!create Anne :Customer
+!Anne.name:= 'Anne'
+!create savAcc2 :SavingsAccount
+!savAcc2.accNo := '909090'
+!savAcc2.balance := 1100
+!insert (Anne, savAcc2) into HasAccounts
+
+
+
+!joe.depositMoney(100,savAcc)
+!joe.depositMoney(300,curAcc)
+
+!joe.withdrawMoney(50,savAcc)

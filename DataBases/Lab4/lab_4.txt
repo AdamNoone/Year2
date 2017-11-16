@@ -1,0 +1,61 @@
+
+
+
+
+ 
+-- Create the tables needed.
+
+CREATE TABLE Sport Details(
+	Code number PRIMARY KEY,
+	Type varchar2(50)
+);
+
+CREATE TABLE Event_Details(
+	Event_Code number(4) PRIMARY KEY,
+	Event_name varchar2(50),
+	Date DATE
+);
+
+CREATE TABLE Competitor (
+   Comp_Number NUMBER(4) PRIMARY KEY,
+   Name VARCHAR2(50),
+   Email Number(4),
+   Postition NUMBER,
+   CONSTRAINT Event_Code_fk FOREIGN KEY (Event_Code)
+      REFERENCES Event_Details(Event_Code)
+   );
+ 
+CREATE TABLE Result(
+   CONSTRAINT Event_Code_fk FOREIGN KEY (Event_Code)
+      REFERENCES Event_Details(Event_Code),
+	  CONSTRAINT Number_fk FOREIGN KEY (Comp_Number)
+      REFERENCES Competitor(Comp_Number)
+   );
+ 
+
+
+
+-- Insert and query data.
+INSERT INTO Sport_Details (CODE , TYPE)  VALUES (1, 'Athletics');
+INSERT INTO Sport_Details (CODE , TYPE)  VALUES (1, 'Athletics');
+INSERT INTO Sport_Details (CODE , TYPE)  VALUES (2, 'Swimming');
+
+INSERT INTO Event(Event_Code, Event_name, Date_of_Event) VALUES (1,'Mens 100m Final', 'SYSDATE');
+INSERT INTO Event(Event_Code, Event_name, Date_of_Event) VALUES (1,'womens 100m Final', 'SYSDATE');
+INSERT INTO Event(Event_Code, Event_name, Date_of_Event) VALUES (2,'Mens 100m Freestyle Final' ,'SYSDATE');
+
+ 
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (1, ' Bolt', 1);
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (2, 'Gatlin', 1);
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (3, 'De Grasse', 1);
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (4, 'Thompson', 1);
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (5, 'Bowie', 1);
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (6, 'Fraser Price', 1);
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (7, 'Chambers', 1);
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (8, 'Timmers', 1);
+INSERT INTO Competitor (Comp_Number, Name, Postition) VALUES (9, 'Adrian', 1);
+
+ 
+
+  
+

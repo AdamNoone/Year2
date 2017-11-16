@@ -1,0 +1,85 @@
+model myPets
+
+class Person
+  attributes
+    name : String
+    student_id : String
+    bank_balance : Integer
+	
+	showCost() : Integer
+	begin
+		declare cost : Integer, b : Integer;
+		Cost := 0;
+		for acc in self.veterinarian do 
+			b := veterinarian.visit_cost();
+			cost := cost + b
+		end;
+		self.wealth := cost;
+		
+		--Write(cost);
+		result := cost
+end
+
+class PetOwner < Person
+ attributes
+ VetCost : Integer
+end
+
+class Animal
+  attributes
+    name : String
+    age : Integer
+    visits_to_vet : Integer
+	
+	operations
+    setVetFor(e : Animal)
+    begin
+      self.veterinarian.setVetFor(e)
+    end
+end
+
+ 
+class Cat < Animal
+  attributes
+    type : String
+    hunts : Boolean
+end
+
+
+class Dog < Animal
+  attributes
+    bark: String
+    energertic : Boolean
+end
+
+
+class Veterinarian
+  attributes
+    name : String
+    tel : String
+    visit_cost : Integer
+	
+	operations
+    setVetFo(p : Animal)
+    begin
+        insert(p, self) into Treats;
+    end
+
+end
+
+association Treats between
+  Animal[*] role patient 
+  Veterinarian[1] role vet
+end
+
+
+association owns between
+  Animal[*] role pet
+  PetOwner[1..*] role owner
+end
+
+association Owns between
+	PetOwner[1]
+	Animal[1] role owner
+end
+

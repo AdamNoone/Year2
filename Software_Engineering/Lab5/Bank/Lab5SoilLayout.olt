@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram_Layout version="13">
+  <diagramOptions>
+    <autolayout>false</autolayout>
+    <antialiasing>false</antialiasing>
+    <showassocnames>true</showassocnames>
+    <showattributes>false</showattributes>
+    <showmultiplicities>false</showmultiplicities>
+    <showoperations>false</showoperations>
+    <showrolenames>false</showrolenames>
+    <showgrid>false</showgrid>
+    <ShowStates>false</ShowStates>
+  </diagramOptions>
+  <node id="joe" sizeCalculated="true" type="Object">
+    <name>joe</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>164.32609267753958</x>
+      <y>115.85522294805833</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="savAcc" sizeCalculated="true" type="Object">
+    <name>savAcc</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>26.108744552350316</x>
+      <y>194.02006244635004</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="curAcc" sizeCalculated="true" type="Object">
+    <name>curAcc</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>274.817791577841</x>
+      <y>196.35340621815374</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="savAcc2" sizeCalculated="true" type="Object">
+    <name>savAcc2</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>282.3900997942278</x>
+      <y>59.68525648222041</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Anne" sizeCalculated="true" type="Object">
+    <name>Anne</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>43.72703891935487</x>
+      <y>61.469749372178185</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <edge type="BinaryEdge">
+    <source>joe</source>
+    <target>curAcc</target>
+    <name>HasAccounts</name>
+    <properties>
+      <edgeproperty
+        id="[HasAccounts : (accounts:curAcc, customer:joe)]::target::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>accounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:curAcc, customer:joe)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:curAcc, customer:joe)]::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>*</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:curAcc, customer:joe)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:curAcc, customer:joe)]::AssociationName"
+        sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+        <name>HasAccounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>[HasAccounts : (accounts:curAcc, customer:joe)]::WayPoint::0</related0>
+            <related1>[HasAccounts : (accounts:curAcc, customer:joe)]::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:curAcc, customer:joe)]::source::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>customer</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:curAcc, customer:joe)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:curAcc, customer:joe)]::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:curAcc, customer:joe)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty
+        id="[HasAccounts : (accounts:curAcc, customer:joe)]::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:curAcc, customer:joe)]::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+    <linkValue>[HasAccounts : (accounts:curAcc, customer:joe)]</linkValue>
+  </edge>
+  <edge type="BinaryEdge">
+    <source>joe</source>
+    <target>savAcc</target>
+    <name>HasAccounts</name>
+    <properties>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc, customer:joe)]::target::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>accounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:savAcc, customer:joe)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc, customer:joe)]::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>*</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:savAcc, customer:joe)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc, customer:joe)]::AssociationName"
+        sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+        <name>HasAccounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>[HasAccounts : (accounts:savAcc, customer:joe)]::WayPoint::0</related0>
+            <related1>[HasAccounts : (accounts:savAcc, customer:joe)]::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc, customer:joe)]::source::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>customer</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:savAcc, customer:joe)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc, customer:joe)]::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:savAcc, customer:joe)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc, customer:joe)]::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc, customer:joe)]::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+    <linkValue>[HasAccounts : (accounts:savAcc, customer:joe)]</linkValue>
+  </edge>
+  <edge type="BinaryEdge">
+    <source>Anne</source>
+    <target>savAcc2</target>
+    <name>HasAccounts</name>
+    <properties>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc2, customer:Anne)]::target::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>accounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:savAcc2, customer:Anne)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc2, customer:Anne)]::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>*</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:savAcc2, customer:Anne)]::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc2, customer:Anne)]::AssociationName"
+        sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+        <name>HasAccounts</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>[HasAccounts : (accounts:savAcc2, customer:Anne)]::WayPoint::0</related0>
+            <related1>[HasAccounts : (accounts:savAcc2, customer:Anne)]::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc2, customer:Anne)]::source::rolename"
+        sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+        <name>customer</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:savAcc2, customer:Anne)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc2, customer:Anne)]::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>[HasAccounts : (accounts:savAcc2, customer:Anne)]::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc2, customer:Anne)]::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty
+        id="[HasAccounts : (accounts:savAcc2, customer:Anne)]::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+    <linkValue>[HasAccounts : (accounts:savAcc2, customer:Anne)]</linkValue>
+  </edge>
+</diagram_Layout>

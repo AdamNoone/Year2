@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram_Layout version="13">
+  <diagramOptions>
+    <autolayout>false</autolayout>
+    <antialiasing>false</antialiasing>
+    <showassocnames>true</showassocnames>
+    <showattributes>true</showattributes>
+    <showmultiplicities>true</showmultiplicities>
+    <showoperations>true</showoperations>
+    <showrolenames>true</showrolenames>
+    <showgrid>false</showgrid>
+  </diagramOptions>
+  <node id="PetOwner" sizeCalculated="true" type="Class">
+    <name>PetOwner</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>41.0</x>
+      <y>186.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Animal" sizeCalculated="true" type="Class">
+    <name>Animal</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>485.0</x>
+      <y>176.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Cat" sizeCalculated="true" type="Class">
+    <name>Cat</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>446.0</x>
+      <y>345.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Veterinarian" sizeCalculated="true" type="Class">
+    <name>Veterinarian</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>501.0</x>
+      <y>12.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Dog" sizeCalculated="true" type="Class">
+    <name>Dog</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>607.0</x>
+      <y>344.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Person" sizeCalculated="true" type="Class">
+    <name>Person</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>33.0</x>
+      <y>14.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <edge type="BinaryEdge">
+    <source>Animal</source>
+    <target>Veterinarian</target>
+    <name>Treats</name>
+    <properties>
+      <edgeproperty id="Treats::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
+        <name>*</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>29.0</userOffsetX>
+          <userOffsetY>8.0</userOffsetY>
+          <attached>Treats::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Treats::source::rolename" sizeCalculated="true"
+        type="rolename" userDefined="true" visible="true">
+        <name>patient</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>-12.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>Treats::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Treats::AssociationName" sizeCalculated="true"
+        type="associationName" userDefined="true" visible="true">
+        <name>Treats</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>28.0</userOffsetX>
+          <userOffsetY>6.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>Treats::WayPoint::0</related0>
+            <related1>Treats::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Treats::target::rolename" sizeCalculated="true"
+        type="rolename" userDefined="true" visible="true">
+        <name>vet</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>-23.0</userOffsetX>
+          <userOffsetY>2.0</userOffsetY>
+          <attached>Treats::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Treats::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>36.0</userOffsetX>
+          <userOffsetY>2.0</userOffsetY>
+          <attached>Treats::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty id="Treats::WayPoint::0" sizeCalculated="true"
+        type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Treats::WayPoint::1" sizeCalculated="true"
+        type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+  </edge>
+  <edge type="BinaryEdge">
+    <source>PetOwner</source>
+    <target>Animal</target>
+    <name>Owns</name>
+    <properties>
+      <edgeproperty id="Owns::source::rolename" sizeCalculated="true"
+        type="rolename" userDefined="false" visible="true">
+        <name>petOwner</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>Owns::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Owns::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>Owns::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Owns::AssociationName" sizeCalculated="true"
+        type="associationName" userDefined="false" visible="true">
+        <name>Owns</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>Owns::WayPoint::0</related0>
+            <related1>Owns::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Owns::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>Owns::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Owns::target::rolename" sizeCalculated="true"
+        type="rolename" userDefined="false" visible="true">
+        <name>owner</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <attached>Owns::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty id="Owns::WayPoint::0" sizeCalculated="true"
+        type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Owns::WayPoint::1" sizeCalculated="true"
+        type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+  </edge>
+  <edge type="BinaryEdge">
+    <source>Animal</source>
+    <target>PetOwner</target>
+    <name>owns</name>
+    <properties>
+      <edgeproperty id="owns::source::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
+        <name>*</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>-2.0</userOffsetX>
+          <userOffsetY>-12.0</userOffsetY>
+          <attached>owns::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="owns::source::rolename" sizeCalculated="true"
+        type="rolename" userDefined="true" visible="true">
+        <name>pet</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>-13.0</userOffsetX>
+          <userOffsetY>18.0</userOffsetY>
+          <attached>owns::WayPoint::0</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="owns::AssociationName" sizeCalculated="true"
+        type="associationName" userDefined="false" visible="true">
+        <name>owns</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+          <offsetX>0.0</offsetX>
+          <offsetY>-10.0</offsetY>
+          <related length="2">
+            <related0>owns::WayPoint::0</related0>
+            <related1>owns::WayPoint::1</related1>
+          </related>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="owns::target::rolename" sizeCalculated="true"
+        type="rolename" userDefined="true" visible="true">
+        <name>owner</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>9.0</userOffsetX>
+          <userOffsetY>21.0</userOffsetY>
+          <attached>owns::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>TOP</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="owns::target::multiplicity"
+        sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
+        <name>1..*</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+          <userOffsetX>4.0</userOffsetX>
+          <userOffsetY>-7.0</userOffsetY>
+          <attached>owns::WayPoint::1</attached>
+          <offset_x>8</offset_x>
+          <offset_y>8</offset_y>
+          <placement>BOTTOM</placement>
+        </strategy>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </properties>
+    <waypoints>
+      <edgeproperty id="owns::WayPoint::0" sizeCalculated="true"
+        type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="owns::WayPoint::1" sizeCalculated="true"
+        type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+  </edge>
+  <edge type="Generalization">
+    <source>PetOwner</source>
+    <target>Person</target>
+    <name>Inheritance</name>
+    <properties/>
+    <waypoints>
+      <edgeproperty id="Generalization::PetOwner::Person::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Generalization::PetOwner::Person::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+  </edge>
+  <edge type="Generalization">
+    <source>Cat</source>
+    <target>Animal</target>
+    <name>Inheritance</name>
+    <properties/>
+    <waypoints>
+      <edgeproperty id="Generalization::Cat::Animal::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Generalization::Cat::Animal::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+  </edge>
+  <edge type="Generalization">
+    <source>Dog</source>
+    <target>Animal</target>
+    <name>Inheritance</name>
+    <properties/>
+    <waypoints>
+      <edgeproperty id="Generalization::Dog::Animal::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Generalization::Dog::Animal::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+  </edge>
+</diagram_Layout>
