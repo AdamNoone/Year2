@@ -1,0 +1,82 @@
+model Employee
+
+-- classes
+
+
+class Contract 
+	attributes 
+		JobTitle:String
+		salary:Integer 
+		operations
+			
+		end 
+
+
+
+class Person
+  attributes
+    name : String
+    age : Integer
+    salary : Real
+  operations
+    getSalary() : Real
+    begin        
+        result := self.salary
+    end
+	
+	
+		deposit(amount : Integer)
+	begin
+		self.salary :=self.salary + amount
+	end
+	
+	
+	
+end
+
+class Company
+  attributes
+    name : String
+    location : String
+    totalSalary : Real
+  operations
+  
+ 
+    doHire(e : Person)
+    begin
+      self.hire(e)
+    end
+    
+    doFire(e : Person)
+	begin
+		self.fire(e)
+	end
+  
+  
+  
+    hire(p : Person)
+    begin
+        insert(p, self) into Contracted_To;
+        p.salary := 20000.0
+    end
+  
+    fire(p : Person)
+	 begin
+        delete(p, self) from Contracted_To;
+        
+    end
+end 
+
+
+
+-- associations
+
+association Has_Contract between
+  Person[*] role employee
+  Contract[0..1] role contract
+end
+
+association Contracted_To between
+  Contract[*] role employee
+  Company[0..1] role contract
+end

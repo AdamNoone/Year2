@@ -1,0 +1,86 @@
+
+
+!create Adam :Person
+!Adam.name:= 'Adam Noone'
+!Adam.age:= 20
+!Adam.salary:= 59000.0
+
+!create Mary :Person
+!Mary.name:= 'Mary Berry'
+!Mary.age:= 78
+!Mary.salary:= 37000.0
+
+
+
+
+
+
+!create Microsoft :Company
+!Microsoft.name:='Microsoft Ltd'
+!Microsoft.location:='Dublin'
+
+!create Google :Company
+!Google.name:='Google Ltd'
+!Google.location:='London'
+
+
+!create Adams_Contract1 :Contract
+!Adams_Contract1.name:='Adams Contract'
+!Adams_Contract1.Job_Type:='Accountant'
+!Adams_Contract1.salary:=10000
+
+!create Adams_Contract2 :Contract
+!Adams_Contract2.name:='Adams Contract'
+!Adams_Contract2.Job_Type:='Manager'
+!Adams_Contract2.salary:=20000
+
+!create Adams_Contract3 :Contract
+!Adams_Contract3.name:='Adams Contract'
+!Adams_Contract3.Job_Type:='Handyman'
+!Adams_Contract3.salary:=30000
+
+
+!create Marys_Contract1 :Contract
+!Marys_Contract1.name:='Marys Contract'
+!Marys_Contract1.Job_Type:='CEO'
+!Marys_Contract1.salary:=90000
+
+!create Marys_Contract2 :Contract
+!Marys_Contract2.name:='Marys Contract'
+!Marys_Contract2.Job_Type:='Manager'
+!Marys_Contract2.salary:=20000
+
+
+
+!insert(Adam,Adams_Contract1) into HasContract
+!insert(Adam,Adams_Contract2) into HasContract
+!insert(Adam,Adams_Contract3) into HasContract
+!insert (Adams_Contract1, Microsoft) into ContractedTo
+!insert (Adams_Contract2, Microsoft) into ContractedTo
+!insert (Adams_Contract3, Google) into ContractedTo
+
+!insert(Mary,Marys_Contract1) into HasContract
+!insert(Mary,Marys_Contract2) into HasContract
+!insert (Marys_Contract1, Microsoft) into ContractedTo
+!insert (Marys_Contract2, Google) into ContractedTo
+
+
+!create Tommy :Person
+!Tommy.name:= 'Tommy Terry'
+!Tommy.age:= 78
+
+!create Tommys_Contract1 :Contract
+!Tommys_Contract1.name:='Tommys Contract'
+!Tommys_Contract1.Job_Type:='Sales Rep'
+!Tommys_Contract1.salary:=50000
+
+
+!insert(Tommy,Tommys_Contract1) into HasContract
+
+--!Google.hire(Tommys_Contract1)
+
+--!Google.fire(Tommys_Contract1)
+
+
+
+

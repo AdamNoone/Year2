@@ -1,0 +1,40 @@
+
+
+!create Adam :Person
+!Adam.name:= 'Adam Noone'
+!Adam.age:= 20
+!Adam.salary:= 59000.0
+
+!create Mary :Person
+!Mary.name:= 'Mary Berry'
+!Mary.age:= 78
+!Mary.salary:= 37000.0
+
+!create Tommy :Person
+!Tommy.name:= 'Tommy Terry'
+!Tommy.age:= 78
+
+
+
+
+!create Microsoft :Company
+!Microsoft.name:='Microsoft Ltd'
+!Microsoft.location:='Dublin'
+
+!create Google :Company
+!Google.name:='Google Ltd'
+!Google.location:='London'
+
+
+!insert (Adam, Microsoft) into WorksFor
+!insert (Mary, Google) into WorksFor
+
+
+!Google.hire(Tommy)
+
+
+!Google.calcTotalSalary()
+
+
+!Adam.deposit(300)
+--!Google.fire(Tommy)

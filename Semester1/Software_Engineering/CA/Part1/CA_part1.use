@@ -1,0 +1,81 @@
+model Employee
+
+-- classes
+
+
+
+class Person
+  attributes
+    name : String
+    age : Integer
+    salary : Real
+  operations
+    getSalary() : Real
+    begin        
+        result := self.salary
+    end
+	
+	
+		deposit(amount : Integer)
+	begin
+		self.salary :=self.salary + amount
+	end
+	
+	
+	
+end
+
+class Company
+  attributes
+    name : String
+    location : String
+    totalSalary : Real
+  operations
+  
+ 
+    doHire(e : Person)
+    begin
+      self.hire(e)
+    end
+    
+    doFire(e : Person)
+	begin
+		self.fire(e)
+	end
+  
+  
+  
+    hire(p : Person)
+    begin
+        insert(p, self) into WorksFor;
+        p.salary := 20000.0
+    end
+  
+    fire(p : Person)
+	 begin
+        delete(p, self) from WorksFor;
+        
+    end
+  
+    calcTotalSalary() : Real
+    begin
+        declare t : Real;
+        result := 0.0;
+        for e in self.employee do
+            t := e.getSalary();
+            result := t + result
+        end;
+        self.totalSalary := result;
+    end
+end
+
+
+-- associations
+
+association WorksFor between
+  Person[*] role employee
+  Company[*] role employer
+end
+
+
+

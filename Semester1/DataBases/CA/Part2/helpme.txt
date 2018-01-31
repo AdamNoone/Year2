@@ -1,0 +1,8 @@
+SELECT 'Specification ' || specID ||' '|| SpecDesc || ' used a total of ' || SUM (qtyUsed ) || ' products at a cost of ' || LTRIM (to_char(SUM(prodPrice*qtyUsed),'u9999.99')) || 
+		' and the total cost including commission was ' --|| LTRIM (to_char((SUM (prodPrice*qtyUsed ) + specCommision),'u999,999.99')) AS High_Value_Specification
+FROM SpecProd                                                         -- Selects from the SpecProd table
+JOIN Specification  using (specID)                                    -- Join the Specification Table to the SpecProd table using specID
+JOIN Product  using (prodID)                                          -- Join the Product Table to the SpecProd table using prodID
+GROUP BY specID,specDesc,specCommision                                -- Group the attributes specID,specDesc,specCommision of thay contain the same values
+HAVING ( SUM (prodPrice*qtyUsed )+ specCommision >  10000)            -- Only show options where (prodPrice*qtyUsed )+ specCommision  is more than 10000
+ORDER BY specID ASC;                                                  -- Display in ascending order of specID
